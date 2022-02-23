@@ -17,10 +17,8 @@ import java.lang.Exception
 
 class SASHuaweiBannerAdapter : SASHuaweiAdapterBase(), SASMediationBannerAdapter {
 
-
     private lateinit var adView: View
     val CLASS_NAME_BANNER = SASHuaweiBannerAdapter::class.java.simpleName
-
 
     override fun requestBannerAd(
         context: Context,
@@ -51,9 +49,7 @@ class SASHuaweiBannerAdapter : SASHuaweiAdapterBase(), SASMediationBannerAdapter
                 false
             )
         }
-
     }
-
 
     private fun createAdListener(
         bannerAdapterListener: SASMediationBannerAdapterListener,
@@ -119,7 +115,6 @@ class SASHuaweiBannerAdapter : SASHuaweiAdapterBase(), SASMediationBannerAdapter
         } else {
             Log.d(CLASS_NAME_BANNER, "Banner size set to default 320x50.")
             BannerAdSize.BANNER_SIZE_320_50
-
         }
     }
 

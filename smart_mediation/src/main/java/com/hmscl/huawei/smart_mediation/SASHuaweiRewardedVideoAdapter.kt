@@ -47,7 +47,8 @@ class SASHuaweiRewardedVideoAdapter : SASHuaweiAdapterBase(), SASMediationReward
                 createAdLoadCallback(rewardedVideoAdapterListener)
             )
         } catch (e: Exception) {
-            val stacktrace = StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString().trim()
+            val stacktrace =
+                StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString().trim()
             Log.e(
                 CLASS_NAME_REWARDED,
                 "Rewarded - loadAd() - Request Rewarded Ad Failed: $stacktrace"
@@ -58,8 +59,6 @@ class SASHuaweiRewardedVideoAdapter : SASHuaweiAdapterBase(), SASMediationReward
                 false
             )
         }
-
-
     }
 
     private fun createAdLoadCallback(rewardedVideoAdapterListener: SASMediationRewardedVideoAdapterListener): RewardAdLoadListener {

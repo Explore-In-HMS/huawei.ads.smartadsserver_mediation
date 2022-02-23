@@ -25,9 +25,7 @@ class SASHuaweiNativeAdapter : SASHuaweiAdapterBase(), SASMediationNativeAdAdapt
     lateinit var builder: NativeAdLoader.Builder
     lateinit var adLoader: NativeAdLoader
 
-
     private val CLASS_NAME_NATIVE = SASHuaweiNativeAdapter::class.java.simpleName
-
 
     override fun requestNativeAd(
         context: Context,
@@ -35,7 +33,6 @@ class SASHuaweiNativeAdapter : SASHuaweiAdapterBase(), SASMediationNativeAdAdapt
         clientParameters: MutableMap<String, Any>,
         nativeAdapterListener: SASMediationNativeAdAdapterListener
     ) {
-
         Log.d(CLASS_NAME_NATIVE, "requestNativeAd()")
         HwAds.init(context)
 
@@ -58,7 +55,6 @@ class SASHuaweiNativeAdapter : SASHuaweiAdapterBase(), SASMediationNativeAdAdapt
                 false
             )
         }
-
 
         setNativeListener(builder, nativeAdapterListener, onSuccess = {
             nativeView.setNativeAd(it)

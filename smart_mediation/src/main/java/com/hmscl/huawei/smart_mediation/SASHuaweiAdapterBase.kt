@@ -16,11 +16,10 @@ open class SASHuaweiAdapterBase {
 
     val ADAPTER_NAME = SASHuaweiAdapterBase::class.java.simpleName
 
-
     fun getAdUnitId(serverParametersString: String): String {
         val parameters: List<String> = serverParametersString.split(",")
         if (parameters.isNotEmpty()) {
-            Log.d(ADAPTER_NAME,"adUnitID read successfully.")
+            Log.d(ADAPTER_NAME, "adUnitID read successfully.")
             return parameters[0]
 
         }
@@ -47,15 +46,15 @@ open class SASHuaweiAdapterBase {
 
             if (userConsent) {
                 adParamBuilder.setNonPersonalizedAd(NonPersonalizedAd.ALLOW_ALL)
-                Log.d(ADAPTER_NAME,"user consent is 1,personalized ads are allowed.")
+                Log.d(ADAPTER_NAME, "user consent is 1,personalized ads are allowed.")
             } else {
                 adParamBuilder.setNonPersonalizedAd(NonPersonalizedAd.ALLOW_NON_PERSONALIZED)
-                Log.d(ADAPTER_NAME,"user consent is 0,only non-personalized ads are allowed.")
+                Log.d(ADAPTER_NAME, "user consent is 0,only non-personalized ads are allowed.")
             }
         } catch (e: Exception) {
             val stacktrace =
                 StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString().trim()
-                Log.e(ADAPTER_NAME, "catch block: $stacktrace")
+            Log.e(ADAPTER_NAME, "catch block: $stacktrace")
         }
 
         /**
@@ -75,8 +74,6 @@ open class SASHuaweiAdapterBase {
         } catch (exception: Exception) {
             Log.e(ADAPTER_NAME, "Tcf String couldn't read.")
         }
-
-
 
         return adParamBuilder.build()
     }

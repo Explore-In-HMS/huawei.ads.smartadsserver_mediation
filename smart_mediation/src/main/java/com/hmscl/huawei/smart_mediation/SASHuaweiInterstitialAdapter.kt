@@ -21,14 +21,12 @@ class SASHuaweiInterstitialAdapter : SASHuaweiAdapterBase(), SASMediationInterst
     var interstitialAd: InterstitialAd? = null
     private lateinit var mContext: Context
 
-
     override fun requestInterstitialAd(
         context: Context,
         serverParametersString: String,
         clientParameters: MutableMap<String, Any>,
         interstitialAdapterListener: SASMediationInterstitialAdapterListener
     ) {
-
         Log.d(CLASS_NAME_INTERSTITIAL, "requestInterstitialAd()")
         HwAds.init(context)
         try {
@@ -42,7 +40,8 @@ class SASHuaweiInterstitialAdapter : SASHuaweiAdapterBase(), SASMediationInterst
             interstitialAd.loadAd(adRequest)
             this.interstitialAd = interstitialAd
         } catch (e: Exception) {
-            val stacktrace = StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString().trim()
+            val stacktrace =
+                StringWriter().also { e.printStackTrace(PrintWriter(it)) }.toString().trim()
             Log.e(
                 CLASS_NAME_INTERSTITIAL,
                 "Interstitial - loadAd() - Request Interstitial Ad Failed: $stacktrace"
@@ -52,10 +51,7 @@ class SASHuaweiInterstitialAdapter : SASHuaweiAdapterBase(), SASMediationInterst
                 false
             )
         }
-
-
     }
-
 
     private fun createAdListener(interstitialAdapterListener: SASMediationInterstitialAdapterListener): AdListener {
         return object : AdListener() {
@@ -100,7 +96,6 @@ class SASHuaweiInterstitialAdapter : SASHuaweiAdapterBase(), SASMediationInterst
                     isNoAd
                 )
                 Log.d(CLASS_NAME_INTERSTITIAL, "Huawei Ads onAdFailed for interstitial")
-
             }
 
             override fun onAdOpened() {
