@@ -49,3 +49,10 @@ dependencies {
     // to add Huawei support, uncomment the following line
     implementation 'com.smartadserver.android:smart-core-sdk-huawei-support:1.0.0'
 }
+
+apply from: '../sonarqube.gradle'
+sonarqube {
+    properties {
+        property "sonar.projectName", "smart_mediation:" + project.name
+    }
+}
