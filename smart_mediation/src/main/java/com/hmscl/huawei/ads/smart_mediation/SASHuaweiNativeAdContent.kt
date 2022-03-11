@@ -128,9 +128,11 @@ open class SASHuaweiNativeAdContent constructor(var huaweiNativeAd: NativeAd) :
     }
 
     override fun unregisterView(view: View) {
+        Log.i(TAG, "unregisterView method called.")
     }
 
     override fun registerView(view: View, array: Array<out View>?) {
+        Log.i(TAG, "registerView method called.")
     }
 
     override fun getAdChoicesUrl(): String {

@@ -1,3 +1,4 @@
+include ':smart_mediation'
 include ':app'
 rootProject.name = "SmartAdsMediation"
-include ':smart_mediation'
+

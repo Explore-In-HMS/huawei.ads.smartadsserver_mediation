@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
 }
@@ -48,11 +48,4 @@ dependencies {
 
     // to add Huawei support, uncomment the following line
     implementation 'com.smartadserver.android:smart-core-sdk-huawei-support:1.0.0'
-}
-
-apply from: '../sonarqube.gradle'
-sonarqube {
-    properties {
-        property "sonar.projectName", "smart_mediation:" + project.name
-    }
 }
