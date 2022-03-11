@@ -9,7 +9,6 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.hmscl.huawei.smart_mediation"
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
