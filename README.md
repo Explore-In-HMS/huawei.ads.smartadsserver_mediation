@@ -40,7 +40,7 @@ In this documentation we explained how to use Huawei-Smartadserver mediation.
 
 |  Ad Types | Banner Ad | Interstitial Ad | Rewarded Ad | Native Ad |
 | --- | --- | --- | --- | --- |
-| Adapter Class | com.hmscl.huawei.smart_mediation.SASHuaweiBannerAdapter |  com.hmscl.huawei.smart_mediation.SASHuaweiInterstitialAdapter |  com.hmscl.huawei.smart_mediation.SASHuaweiRewardedVideoAdapter |  com.hmscl.huawei.smart_mediation.SASHuaweiNativeAdapter  |
+| Adapter Class | com.hmscl.huawei.ads.smart_mediation.SASHuaweiBannerAdapter |  com.hmscl.huawei.ads.smart_mediation.SASHuaweiInterstitialAdapter |  com.hmscl.huawei.ads.smart_mediation.SASHuaweiRewardedVideoAdapter |  com.hmscl.huawei.ads.smart_mediation.SASHuaweiNativeAdapter  |
 | Placement info	| Write the Huawei Ad unit ID,banner width and banner height (sepetate them with ",") | Write the Huawei Ad unit ID with no spaces.| Write the Huawei Ad unit ID with no spaces. | Write the Huawei Ad unit ID with no spaces. |
 
 
