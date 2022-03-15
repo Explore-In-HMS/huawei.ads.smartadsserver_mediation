@@ -31,9 +31,9 @@ open class SASHuaweiAdapterBase {
         val adParamBuilder = AdParam.Builder()
 
         try {
-            val GDPRApplies = clientParameters[SASMediationAdapter.GDPR_APPLIES_KEY] as String?
+            val gdprApplies = clientParameters[SASMediationAdapter.GDPR_APPLIES_KEY] as String?
 
-            val userConsent = if ("false".equals(GDPRApplies, ignoreCase = true)) {
+            val userConsent = if ("false".equals(gdprApplies, ignoreCase = true)) {
                 true
             } else {
 

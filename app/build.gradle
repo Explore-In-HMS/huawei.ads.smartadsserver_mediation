@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.smartadserver.android.sassample"
+        applicationId "com.hmscl.huawei.mediationsmartjitpack"
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 1

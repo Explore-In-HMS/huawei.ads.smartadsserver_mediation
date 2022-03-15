@@ -124,10 +124,8 @@ class SASHuaweiInterstitialAdapter : SASHuaweiAdapterBase(), SASMediationInterst
     }
 
     private fun isInterstitialAdLoaded(): Boolean {
-        if (interstitialAd != null) {
-            if (interstitialAd is InterstitialAd) {
-                return (interstitialAd as InterstitialAd).isLoaded
-            }
+        if (interstitialAd != null && interstitialAd is InterstitialAd) {
+            return (interstitialAd as InterstitialAd).isLoaded
         }
         return false
     }
