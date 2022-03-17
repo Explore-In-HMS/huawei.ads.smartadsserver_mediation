@@ -53,7 +53,8 @@ In this documentation we explained how to use Huawei-Smartadserver mediation.
 
 2-) Ad width and height values for Huawei Banner Ads :
 
-![image](https://user-images.githubusercontent.com/53767481/154481304-3b6ee843-203d-4441-9fd0-1dfd77dd376d.png)
+![banner_size](https://user-images.githubusercontent.com/53767481/158784927-16a5e96c-09ff-41ca-a595-d554c39e3a5e.png)
+
 
 
 
@@ -157,7 +158,7 @@ First version of the Custom Adapter.
 
 # Platforms
 
-## Native
+## Native Android
 
 This section demonstrates how to use smartadserver mediation feature with Huawei Ads Kit on Native android app.
 
