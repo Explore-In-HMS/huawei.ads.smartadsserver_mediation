@@ -92,8 +92,9 @@ In the app-level build.gradle, include Huawei Ads dependency (required by the ad
 
 ```groovy
 dependencies {
-    implementation 'com.huawei.hms:ads:3.4.49.305'
-    implementation 'our-library'
+    implementation 'com.github.Explore-In-HMS:huawei.ads.smartadsserver_mediation:v1.0.0'
+   
+    // Optional : add Smart support library for Huawei devices 
     implementation 'com.smartadserver.android:smart-core-sdk-huawei-support:1.0.0'
 }
 ```
