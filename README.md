@@ -22,6 +22,7 @@ In this documentation we explained how to use Huawei-Smartadserver mediation.
 
 ## Create a mediation on Smart ad server publisher console
 
+   Make sure to check the article on **[How to show Huawei Ads with Smartadserver mediation ?](https://medium.com/huawei-developers/how-to-show-huawei-ads-with-smartadserver-mediation-59b69f711426)**
 
 1. Sign in to [Smartadserver Console](https://manage.smartadserver.com/)
 2. Go to "**Inventory -> Sites & Pages**" and create a site and a page for your mediation. (skip this part if you have your Smartadserver site ID and page ID)
@@ -53,7 +54,8 @@ In this documentation we explained how to use Huawei-Smartadserver mediation.
 
 2-) Ad width and height values for Huawei Banner Ads :
 
-![image](https://user-images.githubusercontent.com/53767481/154481304-3b6ee843-203d-4441-9fd0-1dfd77dd376d.png)
+![banner_size](https://user-images.githubusercontent.com/53767481/158784927-16a5e96c-09ff-41ca-a595-d554c39e3a5e.png)
+
 
 
 
@@ -92,8 +94,9 @@ In the app-level build.gradle, include Huawei Ads dependency (required by the ad
 
 ```groovy
 dependencies {
-    implementation 'com.huawei.hms:ads:3.4.49.305'
-    implementation 'our-library'
+    implementation 'com.github.Explore-In-HMS:huawei.ads.smartadsserver_mediation:v1.0.0'
+   
+    // Optional : add Smart support library for Huawei devices 
     implementation 'com.smartadserver.android:smart-core-sdk-huawei-support:1.0.0'
 }
 ```
@@ -156,7 +159,7 @@ First version of the Custom Adapter.
 
 # Platforms
 
-## Native
+## Native Android
 
 This section demonstrates how to use smartadserver mediation feature with Huawei Ads Kit on Native android app.
 
