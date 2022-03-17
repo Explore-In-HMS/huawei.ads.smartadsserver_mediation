@@ -22,6 +22,7 @@ In this documentation we explained how to use Huawei-Smartadserver mediation.
 
 ## Create a mediation on Smart ad server publisher console
 
+   Make sure to check the article on **[How to show Huawei Ads with Smartadserver mediation ?](https://medium.com/huawei-developers/how-to-show-huawei-ads-with-smartadserver-mediation-59b69f711426)**
 
 1. Sign in to [Smartadserver Console](https://manage.smartadserver.com/)
 2. Go to "**Inventory -> Sites & Pages**" and create a site and a page for your mediation. (skip this part if you have your Smartadserver site ID and page ID)
