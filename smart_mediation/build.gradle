@@ -43,8 +43,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'com.smartadserver.android:smart-display-sdk:7.14.0'
-    implementation 'com.huawei.hms:ads:3.4.49.305'
-
     // to add Huawei support, uncomment the following line
     implementation 'com.smartadserver.android:smart-core-sdk-huawei-support:1.0.0'
+
+    compileOnly 'com.huawei.hms:ads:3.4.54.300'
 }
