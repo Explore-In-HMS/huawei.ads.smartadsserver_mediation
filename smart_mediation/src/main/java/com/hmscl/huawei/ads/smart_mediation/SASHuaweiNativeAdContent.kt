@@ -12,6 +12,8 @@ import kotlin.math.roundToInt
 open class SASHuaweiNativeAdContent constructor(var huaweiNativeAd: NativeAd) :
     SASMediationNativeAdContent {
 
+    private var onClickListener: View.OnClickListener
+    private lateinit var registerClickableViews: Array<out View>
     private val nativeVideoAdElement = SASNativeVideoAdElement()
 
     companion object {
@@ -21,6 +23,13 @@ open class SASHuaweiNativeAdContent constructor(var huaweiNativeAd: NativeAd) :
     }
 
     init {
+
+        onClickListener = View.OnClickListener{
+            if (registerClickableViews != null && registerClickableViews[0] != null) {
+                huaweiNativeAd.triggerClick(huaweiNativeAd.extraBundle)
+            }
+        }
+
         lateinit var videoUrl: String
         if (huaweiNativeAd.videoOperator.hasVideo()) {
 
@@ -129,10 +138,27 @@ open class SASHuaweiNativeAdContent constructor(var huaweiNativeAd: NativeAd) :
 
     override fun unregisterView(view: View) {
         Log.i(TAG, "unregisterView method called.")
+
+        if(registerClickableViews != null){
+            // clean all installed listeners on clickable views
+            for (clickableView in registerClickableViews) {
+                clickableView.setOnClickListener(null)
+                // this is MANDATORY as the view will continue to intercept clicks although
+                // its clickListener is null
+                clickableView.isClickable = false
+            }
+        }
     }
 
     override fun registerView(view: View, array: Array<out View>?) {
         Log.i(TAG, "registerView method called.")
+
+        if (array != null) {
+            registerClickableViews = array
+            for (clickableView in array) {
+                clickableView.setOnClickListener(onClickListener)
+            }
+        }
     }
 
     override fun getAdChoicesUrl(): String {
